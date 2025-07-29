@@ -54,8 +54,7 @@
   color: rgb(63, 61, 61);
 }
 .job-info__list {
-  width: 60%; 
-  /* только что поменял было 60% */
+  width: 72%; 
 } 
 .job-info__list-item {
   font-size: 17px;

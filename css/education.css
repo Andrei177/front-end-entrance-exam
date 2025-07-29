@@ -1,0 +1,44 @@
+.education{
+  flex-grow: 1;
+}
+.education-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.education-grid__item {
+  background-color: white;
+  border-radius: 16px;
+  padding: 15px;
+  align-self: self-start;
+  max-width: 287px;
+}
+.education-grid__item-period {
+  font-size: 20px;
+  font-weight: 500;
+}
+.education-tags__title {
+  padding-top: 15px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.education-tags__list {
+  width: 200px;
+  padding-bottom: 15px;
+  color: rgba(20, 144, 99);
+}
+.favorite-edu {
+  background-color: var(--green-color);
+  color: white;
+}
+.favorite-edu__period {
+  display: flex;
+  justify-content: space-between;
+}
+.favorite-edu__tags-list,
+.favorite-edu__form {
+  color: rgb(235, 249, 242);
+}
+.education-heart img {
+  width: 25px;
+}

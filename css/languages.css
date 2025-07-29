@@ -1,6 +1,6 @@
 .welcome-info__languages {
   flex-grow: 1;
-  min-width: 340px;
+  min-width: 400px;
 }
 .languages-list{
   margin-top: 20px;
@@ -20,7 +20,7 @@
 }
 .languages-list__item-progress {
   height: 19px;
-  width: 67%;
+  width: 80%;
 }
 .progress {
   border-radius: 7px;

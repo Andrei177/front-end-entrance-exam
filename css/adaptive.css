@@ -1,6 +1,57 @@
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
   .wrapper {
     margin: 20px !important;
+  }
+}
+@media (max-width: 1360px) {
+  .job-info__list {
+    width: 69%;
+  }
+}
+@media (max-width: 1280px) {
+  .languages-list__item-progress {
+    width: 75%;
+  }
+  .job-info__list {
+    width: 67%;
+  }
+}
+@media (max-width: 1230px) {
+  .job-info__list {
+    width: 65%;
+  }
+}
+@media (max-width: 1160px) {
+  .languages-list__item-progress {
+    width: 70%;
+  }
+  .job-info__list {
+    width: 63%;
+  }
+}
+@media (max-width: 1130px) {
+  .job-info__list {
+    width: 60%;
+  }
+}
+@media (max-width: 1060px) {
+  .job-info__list {
+    width: 57%;
+  }
+}
+@media (max-width: 1045px) {
+  .languages-list__item-progress {
+    width: 67%;
+  }
+}
+@media (max-width: 1020px) {
+  .job-info__list {
+    width: 54%;
+  }
+}
+@media (max-width: 980px) {
+  .job-info__list {
+    width: 52%;
   }
 }
 @media (max-width: 950px) {
@@ -24,6 +75,57 @@
     display: flex;
     justify-content: space-evenly;
   }
+  .languages-list__item-progress {
+    width: 80%;
+  }
+  .job-info__list {
+    width: 65%;
+  }
+}
+@media (max-width: 915px) {
+  .edu-and-interests {
+    flex-direction: column;
+  }
+  .interests-and-contacts {
+    max-width: 100% !important;
+    flex-direction: row !important;
+  }
+  .contacts {
+    height: min-content;
+  }
+}
+@media (max-width: 900px) {
+  .job-info__list {
+    width: 62%;
+  }
+}
+@media (max-width: 830px) {
+  .job-info__list {
+    width: 60%;
+  }
+}
+@media (max-width: 800px) {
+  .job-info__list {
+    width: 58%;
+  }
+}
+@media (max-width: 760px) {
+  .job-info__list {
+    width: 55%;
+  }
+  .interests-and-contacts {
+    flex-direction: column !important;
+  }
+}
+@media (max-width: 730px) {
+  .job-info__list {
+    width: 53%;
+  }
+}
+@media (max-width: 715px) {
+  .languages-list__item-progress {
+    width: 75%;
+  }
 }
 @media (max-width: 685px) {
   .job-info {
@@ -40,23 +142,34 @@
   .tools-block {
     padding: 25px 15px;
     margin: 0;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
   }
   .experience {
     min-width: 300px;
   }
 
-  .wrapper {
+  .wrapper,
+  .edu-and-interests,
+  .welcome-info,
+  .experience-and-tools,
+  .interests-and-contacts {
     gap: 15px !important;
   }
-
-  .welcome-info {
-    gap: 15px !important;
+}
+@media (max-width: 580px) {
+  .languages-list__item-progress {
+    width: 67%;
   }
-
-  .experience-and-tools {
-    gap: 15px !important;
+}
+@media (max-width: 565px) {
+  .education-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  .education-grid__item {
+    align-self: center;
+    justify-self: center;
   }
 }
 @media (max-width: 445px) {
@@ -64,12 +177,31 @@
     font-size: 24px;
     margin-bottom: 20px;
   }
+  .back-section {
+    padding: 15px !important;
+  }
   .languages-list__item-name {
     font-size: 16px;
   }
   .most-recent-label {
     font-size: 15px;
     padding: 4px 10px;
+    margin-left: auto;
+  }
+  .welcome-info__languages {
+    flex-grow: 1;
+    min-width: 300px;
+  }
+  .experience__list-item {
+    padding: 15px;
+  }
+}
+@media (max-width: 415px) {
+  .contacts-title {
+    font-size: 25px !important;
+  }
+  .contacts-email {
+    font-size: 17px !important;
   }
 }
 @media (max-width: 400px) {
@@ -88,5 +220,8 @@
   }
   .welcome-info__languages {
     min-width: 290px;
+  }
+  .contacts-email {
+    font-size: 16px !important;
   }
 }
