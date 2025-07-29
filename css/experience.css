@@ -1,0 +1,63 @@
+.experience{
+    min-width: 636px;
+}
+.experience__list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 23px; 
+}
+.experience__list-item {
+  padding: 20px;
+  border-radius: 16px;
+  color: black;
+  background-color: white;
+}
+.most-recent-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.most-recent {
+  color: white;
+  background-color: var(--green-color);
+}
+.job-experience {
+  margin-bottom: 23px;
+}
+.experience-time {
+  font-size: 17px;
+  font-weight: 500;
+}
+.most-recent-label {
+  font-size: 17px;
+  color: #ddf163;
+  background-color: rgba(126, 115, 18, 0.4);
+  border-radius: 59px;
+  padding: 5px 15px;
+}
+.job-info {
+  display: flex;
+  justify-content: space-between;
+}
+/* .job-info__title{
+  
+} */
+.job-position {
+  font-size: 20px;
+  font-weight: 500;
+}
+.most-recent-type{
+  color: rgb(235, 249, 242) !important;
+}
+.job-type {
+  color: rgb(63, 61, 61);
+}
+.job-info__list {
+  width: 60%; 
+  /* только что поменял было 60% */
+} 
+.job-info__list-item {
+  font-size: 17px;
+  font-weight: 400;
+}

@@ -1,0 +1,35 @@
+.welcome-info__languages {
+  flex-grow: 1;
+  min-width: 340px;
+}
+.languages-list{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style-type: none;
+}
+.languages-list__item-name{
+  font-weight: 500;
+  font-size: 20px;
+}
+.languages-list__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.languages-list__item-progress {
+  height: 19px;
+  width: 67%;
+}
+.progress {
+  border-radius: 7px;
+  height: 100%;
+  background-color: var(--green-color);
+}
+.full {
+  width: 100%;
+}
+.good {
+  width: 75%;
+}
