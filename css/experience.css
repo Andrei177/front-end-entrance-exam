@@ -1,5 +1,6 @@
 .experience{
     min-width: 636px;
+    flex-grow: 1;
 }
 .experience__list {
   list-style-type: none;
@@ -54,7 +55,7 @@
   color: rgb(63, 61, 61);
 }
 .job-info__list {
-  width: 72%; 
+  width: 70%; 
 } 
 .job-info__list-item {
   font-size: 17px;

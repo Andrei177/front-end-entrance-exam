@@ -53,6 +53,9 @@
   .job-info__list {
     width: 52%;
   }
+  .contacts-email{
+    font-size: 17px !important;
+  }
 }
 @media (max-width: 950px) {
   .welcome-info {
