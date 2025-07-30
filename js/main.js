@@ -1,10 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Конфигурация для обрезки текста (класс: макс.символов)
+    // Конфигурация для обрезки текста
     const ELLIPSIS_CONFIG = {
-        'welcome-info__greeting': 17,
-        'welcome-info__name': 17,
-        'welcome-info__specialty': 17,
-        'languages-list__item-name': 8,
         'experience-time': 25,
         'most-recent-label': 11,
         'job-position': 23,
@@ -14,12 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
         'education-tags__title': 17,
         'education-tags__list': 70,
         'education-form': 25,
-        'interests__list-item': 23,
         'section-title': 52,
         'contacts-email': 31,
     };
 
-    // --- Общие функции ---
     function generateStorageKey(element) {
         // Собираем уникальный путь к элементу в DOM
         let path = [];
@@ -48,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return localStorage.getItem(key);
     }
 
-    // --- Система обрезки текста ---
+    // Система обрезки текста
     function applyEllipsis(element) {
         const className = Array.from(element.classList)
             .find(cls => ELLIPSIS_CONFIG[cls]);
@@ -89,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Система редактирования ---
+    // Система редактирования
     function createInputElement(element) {
         const input = document.createElement('input');
         input.type = 'text';
@@ -172,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 startEditing(element);
             });
 
-            // Обработчик долгого нажатия (для мобильных)
+            // Обработчик долгого нажатия (для тач экранов)
             let longPressTimer;
 
             element.addEventListener('touchstart', (e) => {
@@ -194,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Инициализация ---
+    // Инициализация
     setupEditableElements();
     initEllipsis();
 });
