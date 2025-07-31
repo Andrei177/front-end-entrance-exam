@@ -7,7 +7,6 @@
 .welcome-info__greeting{
   font-weight: 500;
   font-size: 20px;
-  display: inline-block;
 }
 .name-and-specialty{
   display: flex;

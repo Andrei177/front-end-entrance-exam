@@ -1,9 +1,7 @@
 import { exportResumePDF } from "./pdf-export";
 import { setupWaveEffect } from "./wave-effect";
-import html2pdf from "html2pdf.js"
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Конфигурация для обрезки текста
     const ELLIPSIS_CONFIG = {
         'experience-time': 25,
         'most-recent-label': 11,
@@ -19,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     function generateStorageKey(element) {
-        // Собираем уникальный путь к элементу в DOM
         let path = [];
         let current = element;
 
@@ -27,8 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const selector = current.tagName.toLowerCase();
             const id = current.id ? `#${current.id}` : '';
             const classes = current.className && typeof current.className === 'string'
-                ? `.${current.className.replace(/\s+/g, '.')}`
-                : '';
+                ? `.${current.className.replace(/\s+/g, '.')}` : '';
             const nth = Array.from(current.parentNode.children).indexOf(current) + 1;
 
             path.unshift(`${selector}${id}${classes}:nth-child(${nth})`);
@@ -46,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return localStorage.getItem(key);
     }
 
-    // Система обрезки текста
     function applyEllipsis(element) {
         const className = Array.from(element.classList)
             .find(cls => ELLIPSIS_CONFIG[cls]);
@@ -73,21 +68,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function initEditableData() {
+        document.querySelectorAll('.editable').forEach(element => {
+            const key = generateStorageKey(element);
+            const saved = loadData(key);
+            if (saved !== null) {
+                element.textContent = saved;
+            }
+        });
+    }
+
     function initEllipsis() {
         Object.keys(ELLIPSIS_CONFIG).forEach(className => {
             document.querySelectorAll(`.${className}`).forEach(el => {
-                // Загружаем сохраненные данные перед применением обрезки
-                const key = generateStorageKey(el);
-                const savedData = loadData(key);
-                if (savedData) {
-                    el.textContent = savedData;
-                }
                 applyEllipsis(el);
             });
         });
     }
 
-    // Система редактирования
     function createInputElement(element) {
         const input = document.createElement('input');
         input.type = 'text';
@@ -105,28 +103,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function finishEditing(input, element, originalContent) {
         let newContent = input.value.trim();
-
-        // Не позволяем сохранить пустое значение
-        if (newContent === '') {
-            newContent = originalContent;
-        }
+        if (newContent === '') newContent = originalContent;
 
         input.classList.add('fade-out');
 
         setTimeout(() => {
             element.textContent = newContent;
-
-            // Сохраняем данные
             const key = generateStorageKey(element);
             saveData(key, newContent);
-
-            // Применяем обрезку текста если нужно
             applyEllipsis(element);
         }, 200);
     }
 
     function startEditing(element) {
-        // Восстанавливаем полный текст перед редактированием
         restoreFullText(element);
 
         const originalContent = element.textContent.trim();
@@ -136,7 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
         element.appendChild(input);
         input.focus();
 
-        // Обработчики событий
         function handleBlur() {
             finishEditing(input, element, originalContent);
             cleanup();
@@ -155,22 +143,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         input.addEventListener('blur', handleBlur);
         input.addEventListener('keydown', handleKeyDown);
-
-        // Защита от двойного клика на инпут
-        input.addEventListener('dblclick', (e) => {
-            e.stopPropagation();
-        });
+        input.addEventListener('dblclick', (e) => e.stopPropagation());
     }
 
     function setupEditableElements() {
         document.querySelectorAll('.editable').forEach(element => {
-            // Обработчик двойного клика
             element.addEventListener('dblclick', (e) => {
                 e.preventDefault();
                 startEditing(element);
             });
 
-            // Обработчик долгого нажатия (для тач экранов)
             let longPressTimer;
 
             element.addEventListener('touchstart', (e) => {
@@ -192,11 +174,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Инициализация
-    setupEditableElements();
-    initEllipsis();
-    setupWaveEffect();
+    // === ИНИЦИАЛИЗАЦИЯ ===
+    initEditableData();         // 1. восстановление текста
+    setupEditableElements();    // 2. редактируемость
+    initEllipsis();             // 3. обрезка
+    setupWaveEffect();          // 4. визуал
 
+    // === PDF кнопка ===
     document.getElementById('pdf-export-btn').addEventListener('click', async () => {
         const btn = document.getElementById('pdf-export-btn');
         const originalText = btn.textContent;
