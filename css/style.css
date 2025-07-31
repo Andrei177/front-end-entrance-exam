@@ -8,6 +8,7 @@
 @import url("interests.css");
 @import url("contacts.css");
 @import url("wave-effect.css");
+@import url("force-mobile-view.css");
 
 :root {
   --main-color: #f0f0f0;
@@ -125,4 +126,15 @@ ul {
   background-color: rgb(175, 175, 175);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   outline: none;
+}
+
+.download-resume-btn{
+  background-color: black;
+  color: white;
+  width: 100%;
+  padding: 10px;
+  font-size: 25px;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
 }

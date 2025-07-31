@@ -1,4 +1,6 @@
+import { exportResumePDF } from "./pdf-export";
 import { setupWaveEffect } from "./wave-effect";
+import html2pdf from "html2pdf.js"
 
 document.addEventListener('DOMContentLoaded', () => {
     // Конфигурация для обрезки текста
@@ -194,4 +196,21 @@ document.addEventListener('DOMContentLoaded', () => {
     setupEditableElements();
     initEllipsis();
     setupWaveEffect();
+
+    document.getElementById('pdf-export-btn').addEventListener('click', async () => {
+        const btn = document.getElementById('pdf-export-btn');
+        const originalText = btn.textContent;
+        btn.disabled = true;
+        btn.textContent = 'Генерация PDF...';
+
+        try {
+            await exportResumePDF();
+        } catch (err) {
+            console.error('PDF export failed:', err);
+            alert('Ошибка генерации PDF. Попробуйте ещё раз.');
+        } finally {
+            btn.disabled = false;
+            btn.textContent = originalText;
+        }
+    });
 });

@@ -15,7 +15,8 @@
 /* Для темных элементов */
 .experience__list-item.most-recent .wave-effect,
 .contacts .wave-effect,
-.favorite-edu .wave-effect {
+.favorite-edu .wave-effect,
+.download-resume-btn .wave-effect {
   background-color: rgba(0, 255, 229, 1);
 }
 
@@ -35,7 +36,8 @@
 .experience__list-item,
 .tools-block,
 .education-grid__item,
-.interests__list-item {
+.interests__list-item,
+.download-resume-btn {
   position: relative;
   overflow: hidden;
   -webkit-tap-highlight-color: transparent;

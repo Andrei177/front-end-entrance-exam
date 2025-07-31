@@ -1,0 +1,147 @@
+.force-mobile-view {
+  width: 375px !important;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.force-mobile-view .wrapper {
+  margin: 20px !important;
+}
+.force-mobile-view .contacts-email {
+  font-size: 17px !important;
+}
+.force-mobile-view .wrapper,
+.force-mobile-view .welcome-info,
+.force-mobile-view .edu-and-interests,
+.force-mobile-view .experience-and-tools,
+.force-mobile-view .interests-and-contacts {
+  gap: 15px !important;
+}
+.force-mobile-view .welcome-info {
+  flex-wrap: wrap;
+}
+.force-mobile-view .welcome-info__photo {
+  flex-grow: 1;
+  height: 325px;
+}
+.force-mobile-view .welcome-info__me {
+  flex-grow: 1;
+}
+.force-mobile-view .experience-and-tools {
+  flex-wrap: wrap-reverse;
+}
+.force-mobile-view .tools {
+  width: 100%;
+}
+.force-mobile-view .tools-blocks {
+  display: flex;
+  justify-content: space-evenly;
+}
+.force-mobile-view .education {
+  min-width: 275px !important;
+}
+.force-mobile-view .contacts {
+  height: min-content;
+}
+.force-mobile-view .education-grid {
+  grid-template-columns: 1fr !important;
+}
+.force-mobile-view .education-grid__item {
+  justify-self: center;
+}
+.force-mobile-view .interests-and-contacts {
+  flex-direction: column !important;
+}
+.force-mobile-view .job-info {
+  flex-direction: column;
+  gap: 15px;
+}
+.force-mobile-view .job-info__list {
+  padding-left: 40px;
+  width: 100%;
+}
+.force-mobile-view .tools-blocks {
+  flex-direction: column;
+}
+.force-mobile-view .tools-block {
+  padding: 25px 15px;
+  margin: 0;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.force-mobile-view .experience {
+  min-width: 300px;
+}
+.force-mobile-view .education-grid {
+  grid-template-columns: 1fr 1fr !important;
+}
+.force-mobile-view .edu-and-interests {
+  flex-direction: column;
+}
+.force-mobile-view .interests-and-contacts {
+  max-width: 100% !important;
+}
+.force-mobile-view .languages-list__item-progress {
+  width: 67%;
+}
+.force-mobile-view .education-grid {
+  grid-template-columns: 1fr !important;
+  gap: 20px !important;
+}
+.force-mobile-view .education-grid__item {
+  align-self: center;
+  justify-self: center;
+}
+.force-mobile-view .section-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.force-mobile-view .back-section {
+  padding: 15px !important;
+}
+.force-mobile-view .languages-list__item-name {
+  font-size: 16px;
+}
+.force-mobile-view .most-recent-label {
+  font-size: 15px;
+  padding: 4px 10px;
+  margin-left: auto;
+}
+.force-mobile-view .welcome-info__languages {
+  flex-grow: 1;
+  min-width: 300px;
+}
+.force-mobile-view .experience__list-item {
+  padding: 15px;
+}
+.force-mobile-view .contacts-title {
+  font-size: 25px !important;
+}
+.force-mobile-view .contacts-email {
+  font-size: 17px !important;
+}
+.force-mobile-view .most-recent-group {
+  flex-direction: column-reverse;
+  align-items: start;
+}
+.force-mobile-view .welcome-info__languages {
+  min-width: 290px;
+}
+.force-mobile-view .contacts-email {
+  font-size: 16px !important;
+}
+
+/* Разрывы страниц */
+.force-mobile-view .back-section,
+.force-mobile-view .experience__list-item,
+.force-mobile-view .education-grid__item {
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
+}
+
+.force-mobile-view .experience-and-tools {
+  page-break-before: always !important;
+}
+
+.force-mobile-view .edu-and-interests {
+  page-break-before: always !important;
+}
