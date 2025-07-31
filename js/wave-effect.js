@@ -21,7 +21,7 @@ export function setupWaveEffect() {
 
 
     function getWaveTarget(element) {
-        const waveSelector = '.back-section, .experience__list-item, .tools-block, .education-grid__item, .interests__list-item, .download-resume-btn';
+        const waveSelector = '.back-section, .experience__list-item, .tools-block, .education-grid__item, .interests__list-item, .download-resume-btn, .tools-block-title, .welcome-info__photo';
         while (element && element !== document.body) {
             if (element.matches(waveSelector)) {
                 return element;

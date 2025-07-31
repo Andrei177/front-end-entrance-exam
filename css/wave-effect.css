@@ -2,7 +2,7 @@
   position: absolute;
   display: block;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
   transform: scale(0);
   pointer-events: none;
   animation: wave 0.8s ease-out;
@@ -16,7 +16,8 @@
 .experience__list-item.most-recent .wave-effect,
 .contacts .wave-effect,
 .favorite-edu .wave-effect,
-.download-resume-btn .wave-effect {
+.download-resume-btn .wave-effect,
+.tools-block-title .wave-effect{
   background-color: rgba(0, 255, 229, 1);
 }
 
@@ -37,7 +38,9 @@
 .tools-block,
 .education-grid__item,
 .interests__list-item,
-.download-resume-btn {
+.download-resume-btn,
+.tools-block-title,
+.welcome-info__photo {
   position: relative;
   overflow: hidden;
   -webkit-tap-highlight-color: transparent;

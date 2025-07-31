@@ -28,6 +28,7 @@
     background-color: black;
     color: white;
     padding: 5px 15px;
+    max-width: 152px;
 }
 .tools-block__img{
     justify-self: center;
