@@ -1,0 +1,42 @@
+.wave-effect {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: scale(0);
+  pointer-events: none;
+  animation: wave 0.8s ease-out;
+  z-index: 10;
+  opacity: 1;
+  transform-origin: center;
+  box-sizing: border-box;
+}
+
+/* Для темных элементов */
+.experience__list-item.most-recent .wave-effect,
+.contacts .wave-effect,
+.favorite-edu .wave-effect {
+  background-color: rgba(0, 255, 229, 1);
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+/* Общие стили для элементов с эффектом */
+.back-section,
+.experience__list-item,
+.tools-block,
+.education-grid__item,
+.interests__list-item {
+  position: relative;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+}

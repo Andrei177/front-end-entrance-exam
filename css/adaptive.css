@@ -53,8 +53,15 @@
   .job-info__list {
     width: 52%;
   }
-  .contacts-email{
+  .contacts-email {
     font-size: 17px !important;
+  }
+  .wrapper,
+  .welcome-info,
+  .edu-and-interests,
+  .experience-and-tools,
+  .interests-and-contacts {
+    gap: 15px !important;
   }
 }
 @media (max-width: 950px) {
@@ -86,15 +93,17 @@
   }
 }
 @media (max-width: 915px) {
-  .edu-and-interests {
-    flex-direction: column;
-  }
-  .interests-and-contacts {
-    max-width: 100% !important;
-    flex-direction: row !important;
+  .education {
+    min-width: 275px !important;
   }
   .contacts {
     height: min-content;
+  }
+  .education-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .education-grid__item {
+    justify-self: center;
   }
 }
 @media (max-width: 900px) {
@@ -158,6 +167,16 @@
   .experience-and-tools,
   .interests-and-contacts {
     gap: 15px !important;
+  }
+
+  .education-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .edu-and-interests {
+    flex-direction: column;
+  }
+  .interests-and-contacts {
+    max-width: 100% !important;
   }
 }
 @media (max-width: 580px) {

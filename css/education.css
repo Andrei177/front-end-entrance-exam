@@ -1,17 +1,18 @@
 .education{
   flex-grow: 1;
+  min-width: 535px;
 }
 .education-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  gap: 25px;
 }
 .education-grid__item {
   background-color: white;
   border-radius: 16px;
   padding: 15px;
   align-self: self-start;
-  max-width: 287px;
+  width: 235px !important;
 }
 .education-grid__item-period {
   font-size: 20px;

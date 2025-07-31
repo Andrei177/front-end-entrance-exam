@@ -1,6 +1,6 @@
 .tools{
     text-align: center;
-    /* min-width: 244px; */
+    min-width: 244px;
 }
 .tools .section-title{
     text-align: start;
@@ -18,6 +18,8 @@
     margin: 0 25px;
 }
 .tools-block-title{
+    position: relative;
+    z-index: 1;
     display: inline-block;
     margin: 0 auto;
     transform: translateY(15px);

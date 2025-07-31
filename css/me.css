@@ -7,14 +7,22 @@
 .welcome-info__greeting{
   font-weight: 500;
   font-size: 20px;
+  display: inline-block;
+}
+.name-and-specialty{
+  display: flex;
+  flex-direction: column;
+  width: min-content;
 }
 .welcome-info__name{
   font-weight: 600;
   font-size: 25px;
   padding-bottom: 5px;
+  display: inline-block;
 }
 .welcome-info__specialty{
   font-weight: 500;
   font-size: 22px;
   color: #5C5C5C;
+  display: inline-block;
 }

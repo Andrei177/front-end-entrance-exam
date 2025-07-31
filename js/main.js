@@ -1,3 +1,5 @@
+import { setupWaveEffect } from "./wave-effect";
+
 document.addEventListener('DOMContentLoaded', () => {
     // Конфигурация для обрезки текста
     const ELLIPSIS_CONFIG = {
@@ -191,4 +193,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // Инициализация
     setupEditableElements();
     initEllipsis();
+    setupWaveEffect();
 });
